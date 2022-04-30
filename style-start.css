@@ -142,20 +142,28 @@ h3 {
 	border: 2px solid #a775f1;
 }
 
-.grid-col-span-2 {
-	grid-column: span 2;
-}
-
 /* components */
 .testimonial-grid {
 	/* Grid changes */
 	display: grid;
 	gap: 1.5rem;
-	grid-template-columns: repeat(4, 1fr);
 
 	padding-block: 2rem;
 	width: min(95%, 70rem);
 	margin-inline: auto;
+}
+
+@media (min-width: 50em) {
+	.testimonial-grid {
+		grid-template-columns: repeat(4, 1fr);
+	}
+	.testimonial:last-child {
+		grid-column-start: 4;
+		grid-row: 1 / span 2;
+	}
+	.grid-col-span-2 {
+		grid-column: span 2;
+	}
 }
 
 .testimonial {
@@ -169,11 +177,6 @@ h3 {
 	background-image: url('./images/bg-pattern-quotation.svg');
 	background-repeat: no-repeat;
 	background-position: top right 10%;
-}
-
-.testimonial:last-child {
-	grid-column-start: 4;
-	grid-row: 1 / span 2;
 }
 
 .testimonial img {
