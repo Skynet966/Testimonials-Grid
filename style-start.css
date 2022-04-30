@@ -171,6 +171,11 @@ h3 {
 	background-position: top right 10%;
 }
 
+.testimonial:last-child {
+	grid-column-start: 4;
+	grid-row: 1 / span 2;
+}
+
 .testimonial img {
 	width: 1.75rem;
 	aspect-ratio: 1;
